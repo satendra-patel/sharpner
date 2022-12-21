@@ -9,3 +9,4 @@ for(var i=0;i<even.length;i++)
     even[i].style.backgroundColor="cyan";
 }
 document.querySelectorAll(".list-group-item")[1].style.backgroundColor="green";
+document.getElementById("items").style.color="blue"
