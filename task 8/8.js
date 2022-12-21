@@ -6,6 +6,8 @@ var filter = document.getElementById('filter');
 form.addEventListener('submit', addItem);
 // Delete event
 itemList.addEventListener('click', removeItem);
+itemList.addEventListener('click', edititem);
+
 // Filter event
 filter.addEventListener('keyup', filterItems);
 
@@ -29,13 +31,14 @@ function addItem(e){
 
   // Add classes to del button
   deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
-  editBtn.className = 'btn btn-danger btn-sm float-right ';
+  editBtn.className = 'btn btn-danger btn-sm float-right edit';
   // Append text node
   deleteBtn.appendChild(document.createTextNode('Delete'));
   editBtn.appendChild(document.createTextNode('Edit'));
 
   // Append button to li
   li.appendChild(deleteBtn);
+  li.appendChild(editBtn);
 
   // Append li to list
   itemList.appendChild(li);
@@ -45,10 +48,22 @@ function addItem(e){
 function removeItem(e){
   if(e.target.classList.contains('delete')){
     if(confirm('Are You Sure?')){
-      var li = e.target.parentElement;
+      let li = e.target.parentElement;
       itemList.removeChild(li);
     }
   }
+}
+function edititem(e){
+    if(e.target.classList.contains('edit')){
+        let li=e.target.parentElement;
+        let text=document.getElementById('item');
+        let btn=e.target.previousSibling.previousSibling;
+        
+        console.log(btn.text);
+        text.value=btn.textContent;
+        text.value=li.textContent;
+        itemList.removeChild(li)
+    }
 }
 
 // Filter Items
