@@ -17,7 +17,12 @@ btn.addEventListener('click',()=>{
     
 
 
-
+show(fname,e,mobile);
 
 })
+function show(a,b,c){
+ const parent=document.getElementById('ul');
+ const child=`<li id="${b}"> ${a} ${b} ${c} </li> `;
+ parent.innerHTML+=child;
+}
    
