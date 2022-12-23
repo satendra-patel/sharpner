@@ -22,7 +22,7 @@ show(fname,e,mobile);
 })
 function show(a,b,c){
  const parent=document.getElementById('ul');
- const child=`<li id="${b}"> ${a} ${b} ${c} </li> `;
+ const child=`<li id="${b}"> ${a} ${b} ${c} <button>Edit</button><button>Delete</button> </li>`;
  parent.innerHTML+=child;
 }
    

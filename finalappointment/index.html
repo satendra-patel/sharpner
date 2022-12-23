@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <div><h1>Book Your AppointMent </h1></div>
+        <form  onsubmit="saveToLocalStorage(event)">
+            <label> Name :</label>
+            <input id='username' type="text" name="username"  required/>
+            <label> EmailId :</label>
+            <input id='email' type="email" name="emailId"  required/>
+            <label> Phone Number :</label>
+            <input id='phonenumber' type="tel" name="phonenumber" required />
+            <button> Submit </button>
+        </form>
+        <ul id='users'></ul>
+        <script src="main.js"> </script>
+
+
+    </body>
+</html>
