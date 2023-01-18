@@ -1,0 +1,16 @@
+body {
+background-color: aqua;
+margin-top: auto;
+margin-bottom: auto;     
+}
+h1{
+    text-align: center;
+    text-decoration-color: brown;
+
+}
+div{
+    margin-top: 2%;
+    margin-left: 15%;
+    text-decoration-color: brown;
+    background-color: aqua;
+}

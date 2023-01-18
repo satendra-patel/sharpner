@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Expanse Tracker App </h1>
+        <div>
+        <form  onsubmit="saveToLocalStorage(event)">
+            <label> Expanse Name :</label>
+            <input id='username' type="text" name="username"  required/>
+            <label>   Expanse-catogory :</label>
+            
+            <select name="emailId" id="email">
+                <option value="Grocery">Grocery</option>
+                <option value="food">Food</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Travel">Travel</option>
+                <option value="rent">Rent</option>
+              </select>
+            <label>    Cost in Rs :</label>
+            <input id='phonenumber' type="number" name="phonenumber" required />
+            <button> Submit </button>
+        </form>
+        <ul id='users'></ul>
+    </div>
+        <script src="main.js"> </script>
+
+
+    
+</body>
+</html>
